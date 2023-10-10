@@ -4,8 +4,8 @@ buildscript {
         flatDir {
             dirs 'libs'
         }
-        maven { url "http://repo.spring.io/libs-snapshot"}
-        maven { url "http://repo.spring.io/plugins-release"}
+        maven { url "https://repo.spring.io/libs-snapshot"}
+        maven { url "https://repo.spring.io/plugins-release"}
         maven { url "https://repo.spring.io/milestone"}
         mavenCentral()
     }
@@ -32,7 +32,7 @@ ext {
 }
 
 jar {
-    baseName = 'sourcecontrol-broker'
+    baseName = 'ap-source-control-broker'
 }
 
 repositories {
@@ -40,8 +40,8 @@ repositories {
         dirs 'libs'
     }
     mavenCentral()
-    maven { url "http://repo.spring.io/libs-snapshot" }
-    maven { url "http://repo.spring.io/plugins-release"}
+    maven { url "https://repo.spring.io/libs-snapshot" }
+    maven { url "https://repo.spring.io/plugins-release"}
     maven { url "https://repo.spring.io/milestone"}
 }
 
@@ -51,7 +51,7 @@ configurations {
 
 dependencies {
 
-    compile files('libs/openpaas-service-java-broker.jar')
+    compile files('libs/ap-service-broker-1.0.0.1.jar')
 
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     compile('org.springframework.boot:spring-boot-starter-web')
@@ -82,5 +82,5 @@ test {
 
 
 springBoot {
-    mainClass = "org.paasta.servicebroker.sourcecontrol.config.Application"
+    mainClass = "org.servicebroker.sourcecontrol.config.Application"
 }

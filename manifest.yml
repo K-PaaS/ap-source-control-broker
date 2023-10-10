@@ -1,6 +1,6 @@
 ---
 applications:
-- name: paasta-service-java-broker
+- name: ap-source-control-broker
   memory: 512M
   instances: 1
-  path: build/libs/paasta-service-java-broker.jar
+  path: build/libs/ap-source-control-broker.jar
